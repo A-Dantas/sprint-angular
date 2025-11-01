@@ -58,7 +58,8 @@
 
 .formulario input {
   width: 100%;
-  padding: 6px;
+  padding: 7px;
+  padding-left: 28px;
   border-radius: 5px;
 }
 
@@ -67,7 +68,30 @@
   justify-content: flex-end;
   margin-top: 8px;
   width: 100%;
-  gap: 100px;
+  gap: 130px;
+}
+
+.div_dados {
+  width: 100%;
+  display: flex;
+}
+
+.div_dados img {
+  position: absolute;
+  padding: 4px;
+}
+
+#icon_user {
+  left: 59%;
+}
+
+#icon_info {
+  left: 95.3%;
+}
+
+#icon_info_2 {
+  left: 95.3%;
+  top: -30%;
 }
 
 .switch {
@@ -137,28 +161,42 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
+@media (max-width: 800px) {
+  .container_imagem {
+    display: none;
+  }
 
-@media (max-width: 700px) {
-    .container_imagem {
-        display: none;
-    }
+  .container_login {
+    width: 100vw;
+  }
 
-    .container_login {
-        width: 100vw;
-    }
+  .texto {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .texto {
-        display: flex;
-        justify-content: space-between;
-    }
+  .div_dados img {
+    position: absolute;
+    padding: 4px;
+  }
+
+  #icon_user {
+    left: 10%;
+  }
+
+  #icon_info {
+    left: 89.7%;
+  }
 }
 
-@media (max-width: 300px) {
-    .texto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px
-    }
+@media (max-width: 450px) {
+  .texto {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .texto p {
+    font-size: 0.8rem;
+  }
 }
