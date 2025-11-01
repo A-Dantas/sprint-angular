@@ -146,4 +146,19 @@ input:checked + .slider:before {
     .container_login {
         width: 100vw;
     }
+
+    .texto {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 300px) {
+    .texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
 }
