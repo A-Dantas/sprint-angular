@@ -1,36 +1,62 @@
 main {
     height: 100vh;
-    display: flex;
     background-image: url('/img/ranger_login.png');
     background-size: 70%;
     background-position: center center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.icons_home {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+#icon_burguer {
+    width: 35px;
+    margin: 10px;
+}
+
+#icon_logout {
+    width: 35px;
+    margin: 10px;
+}
+
+#logo {
+    width: 50px;
 }
 
 nav {
     display: flex;
+    flex-direction: column;
 }
 
 
 .bem-vindo {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 400px;
     margin: auto;
+    width: 600px;
+    height: 300px;
     font-size: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.850);
+    background-color: rgba(255, 255, 255, 0.700);
     border: 2px solid rgba(142, 142, 142, 0.86);
     border-radius: 5px;
 }
 
-.bem-vindo header {
-    background-color: rgba(169, 169, 169, 0.725);
+.bem-vindo h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(239, 233, 233, 0.695);
     padding: 15px;
 }
 
 .bem-vindo h2 {
     color: rgb(35, 32, 216);
     padding: 15px;
+    margin: auto;
     font-size: 1.4rem;
 }
