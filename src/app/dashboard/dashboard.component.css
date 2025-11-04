@@ -1,0 +1,92 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_principal {
+    margin-bottom: 20px;
+}
+
+#id_titulo_principal {
+    color: blue;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 280px;
+    height: 160px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.cabecalho_card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(169, 169, 169, 0.267);
+}
+
+.titulo_card {
+    font-size: 1.5em;
+    padding: 10px 0 10px 15px;
+}
+
+.texto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.texto p {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    font-weight: bold;
+    color: rgb(63, 126, 243);
+}
+
+.texto span {
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.553);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.menu select {
+    width: 80%;
+    padding: 12px;
+}
+
+.container_imagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+#img_carro {
+    width: 60%;
+}
