@@ -1,62 +1,33 @@
 main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100vw;
     height: 100vh;
     background-image: url('/img/ranger_login.png');
-    background-size: 70%;
+    background-size: 65%;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.container_boas_vindas {
     display: flex;
     flex-direction: column;
-}
-
-.icons_home {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-#icon_burguer {
-    width: 35px;
-    margin: 10px;
-}
-
-#icon_logout {
-    width: 35px;
-    margin: 10px;
-}
-
-#logo {
-    width: 50px;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.bem-vindo {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 600px;
-    height: 300px;
-    font-size: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.700);
-    border: 2px solid rgba(142, 142, 142, 0.86);
-    border-radius: 5px;
-}
-
-.bem-vindo h1 {
-    width: 100%;
-    display: flex;
     justify-content: center;
-    background-color: rgba(239, 233, 233, 0.695);
-    padding: 15px;
+    width: 380px;
+    height: 125px;
+    background-color: rgba(255, 255, 255, 0.443);
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.509);
 }
 
-.bem-vindo h2 {
-    color: rgb(35, 32, 216);
-    padding: 15px;
-    margin: auto;
-    font-size: 1.4rem;
+.textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texto_h2 {
+    color: blue;    
 }
