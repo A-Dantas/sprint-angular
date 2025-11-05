@@ -1,9 +1,10 @@
 main {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .titulo_principal {
@@ -12,7 +13,7 @@ main {
 
 #id_titulo_principal {
     color: blue;
-    font-size: 2.3em;
+    font-size: 2.3jem;
     font-weight: bold;
 }
 
@@ -89,4 +90,52 @@ main {
 
 #img_carro {
     width: 60%;
+}
+
+.rodape {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.tabela {
+    width: 100%;
+}
+
+.tabela {
+    border-collapse: collapse;
+}
+
+.tabela th {
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background-color: blue;
+    font-size: 1.09rem;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabela tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#item_input input {
+    width: 85%;
+}
+
+.tabela_infos td {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 13px;
+}
+
+#linha_azul_rodape {
+    background-color: blue;
+    padding: 10px;
 }
