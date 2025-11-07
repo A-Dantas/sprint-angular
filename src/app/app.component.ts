@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'sprint_angular';
+
+  constructor (private apiService: ApiService) { }
+  
+  ngOnInit(): void {
+    this.apiService.buscarVehicles().subscribe()
+  }
+
 }
