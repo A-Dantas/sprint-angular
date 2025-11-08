@@ -8,13 +8,11 @@ import { ApiService } from './api.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'sprint_angular';
 
   constructor (private apiService: ApiService) { }
   
-  ngOnInit(): void {
-    this.apiService.buscarVehicles().subscribe()
-  }
+  // this.apiService.buscarVehicles().subscribe();
 
 }

@@ -13,12 +13,12 @@
                 <h1 class="titulo">Boas-vindas</h1>
                 <div class="div_dados">
                     <img id="icon_user" src="img/icon_user.svg" alt="Icone de usuário">
-                    <input type="text" placeholder="Insira seu e-mail">
+                    <input [(ngModel)]="nomeLogin" name="login" type="text" placeholder="Insira seu e-mail">
                     <img id="icon_info" src="img/icon_info.svg" alt="Icone de informação">
                 </div>
                 <div class="div_dados">
                     <img id="icon_lock" src="img/icon_lock.svg" alt="Icone de cadeado">
-                    <input type="text" placeholder="Insira sua senha">
+                    <input [(ngModel)]="senhaLogin" name="senha" type="text" placeholder="Insira sua senha">
                 </div>
                 <div class="div_dados">
                     <img id="icon_info_2" src="img/icon_info.svg" alt="Icone de informação">
@@ -31,9 +31,8 @@
                         <span class="slider"></span>
                     </label>
                 </div>
-
-
-                <button>
+                
+                <button (click)="testarLogin()">
                     Entrar
                 </button>
             </form>
