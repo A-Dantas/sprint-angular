@@ -11,8 +11,6 @@ import { ApiService } from './api.service';
 export class AppComponent {
   title = 'sprint_angular';
 
-  constructor (private apiService: ApiService) { }
+  constructor (private apiService: ApiService) {}
   
-  // this.apiService.buscarVehicles().subscribe();
-
 }

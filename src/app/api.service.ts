@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { StringToken } from '@angular/compiler';
+import { Vehicle } from './models/vehicle.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,22 +10,19 @@ export class ApiService {
 
   private urlApi = 'http://localhost:3001/';
   
-  constructor(private http: HttpClient){
-    
-  }
+  constructor(private http: HttpClient) {}
   
   fazerLogin(dadosLogin: any) {
     return this.http.post(this.urlApi + 'login', dadosLogin);
   }
 
-  buscarVehicles() {
-    return this.http.get(this.urlApi + 'vehicles');
+  buscarVehicles() : Observable<Vehicle[]> {
+    return this.http.get<Vehicle[]>(this.urlApi + 'vehicles');
   }
 
   buscarVehicleData(vehicleInfo: string) {
 
     const body = { vin: vehicleInfo }
-
     return this.http.post(this.urlApi + 'vehicleData', body);
-  } 
+  }
 }

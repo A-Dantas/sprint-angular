@@ -10,12 +10,10 @@
                 <h1 class="titulo_card">Veículos</h1>
             </div>
             <div class="menu">
-                <select name="" id="">
-                    <option value="" selected disabled hidden>Selecione um carro</option>
-                    <option value="">Ranger</option>
-                    <option value="">Mustang</option>
-                    <option value="">Territory</option>
-                    <option value="">Bronco Sport</option>
+                <select [(ngModel)]="veiculoSelecionado"> 
+                    <option value="" selected disabled hidden>Selecione um carro
+                    </option>
+                    <option *ngFor="let vehicles of listaVehicles" [ngValue]="vehicles">{{ vehicles.vehicle }} </option>
                 </select>
             </div>
         </div>
@@ -24,7 +22,7 @@
                 <h1 class="titulo_card">Total de Vendas</h1>
             </div>
             <div class="texto">
-                <p>1500</p>
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.volumetotal }} </p>
                 <span>Unid.</span>
             </div>
         </div>
@@ -33,7 +31,7 @@
                 <h1 class="titulo_card">Conectados</h1>
             </div>
             <div class="texto">
-                <p>1500</p>
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.connected }} </p>
                 <span>Unid.</span>
             </div>
         </div>
@@ -42,14 +40,14 @@
                 <h1 class="titulo_card">Update Software</h1>
             </div>
             <div class="texto">
-                <p>1500</p>
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.softwareUpdates }} </p>
                 <span>Unid.</span>
             </div>
         </div>
     </div>
 
     <section class="container_imagem">
-        <img id="img_carro" src="img/mustang.png" alt="">
+        <img id="img_carro" src="{{ veiculoSelecionado?.img }}" alt="">
     </section>
 
     <footer class="rodape">
