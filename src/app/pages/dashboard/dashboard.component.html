@@ -74,22 +74,22 @@
             </tr>
             <tr class="tabela_infos">
                 <td id="item_input">
-                    <input type="text">
+                    <input [(ngModel)]="vinDigitado" (ngModelChange)="returnVehiclesData()">
                 </td>
                 <td>
-                    50000 KM
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.odometro }} KM </p>
                 </td>
                 <td>
-                    90%
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.nivelCombustivel }}</p>
                 </td>
                 <td>
-                    On
+                    <p *ngIf="dadosDoVeiculo"> "{{ dadosDoVeiculo.status }}" </p>
                 </td>
                 <td>
-                    -12,2322
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.lat}} </p>
                 </td>
                 <td>
-                    -35,2314
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.long }} </p>
                 </td>
             </tr>
             <tr id="linha_azul_rodape">

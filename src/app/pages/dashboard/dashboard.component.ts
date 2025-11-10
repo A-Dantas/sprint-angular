@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, afterNextRender } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ApiService } from '../../api.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Vehicle } from '../../models/vehicle.model';
+import { VehicleData } from '../../models/vehicleData.model';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -21,10 +23,15 @@ export class DashboardComponent {
 
   veiculoSelecionado?: Vehicle;
 
+  vinDigitado: string = '';
+
+  dadosDoVeiculo?: VehicleData;
+
   constructor(private apiService: ApiService) {
     
     this.returnVehicles();
-    
+    this.returnVehiclesData();
+
   }
 
   returnVehicles() {
@@ -38,5 +45,14 @@ export class DashboardComponent {
       }
       
     });
+  }
+
+  returnVehiclesData() {
+    
+    this.apiService.buscarVehicleData(this.vinDigitado).subscribe({
+      next: (vehicleData) => {
+        this.dadosDoVeiculo = vehicleData;                
+      }
+    })
   }
 }

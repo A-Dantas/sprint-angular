@@ -18,7 +18,7 @@ export class LoginComponent {
 
   testarLogin() {
     this.apiService.fazerLogin({ nome: this.nomeLogin, senha: this.senhaLogin }).subscribe({
-      next: (respostaDaApi: any) => {
+      next: () => {
         alert('Login feito com sucesso');
         this.router.navigate(['/home']);
       },

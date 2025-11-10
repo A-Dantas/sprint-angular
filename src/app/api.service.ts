@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Vehicle } from './models/vehicle.model';
 import { Observable } from 'rxjs';
+import { VehicleData } from './models/vehicleData.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +21,9 @@ export class ApiService {
     return this.http.get<Vehicle[]>(this.urlApi + 'vehicles');
   }
 
-  buscarVehicleData(vehicleInfo: string) {
+  buscarVehicleData(vehicleInfo: string): Observable<VehicleData> {
 
     const body = { vin: vehicleInfo }
-    return this.http.post(this.urlApi + 'vehicleData', body);
+    return this.http.post<VehicleData>(this.urlApi + 'vehicleData', body);
   }
 }
