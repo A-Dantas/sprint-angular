@@ -18,7 +18,9 @@
                 </div>
                 <div class="div_dados">
                     <img id="icon_lock" src="img/icon_lock.svg" alt="Icone de cadeado">
-                    <input [(ngModel)]="senhaLogin" name="senha" type="text" placeholder="Insira sua senha">
+                    <input [(ngModel)]="senhaLogin" name="senha" [type]="olhoFechado ? 'password' : 'text' " placeholder="Insira sua senha">
+                    <img id="olho_fechado" (click)="toggleOlhoFechado()" *ngIf="olhoFechado" src="img/olho_fechado.svg" alt="Mostrar Senha">
+                    <img id="olho_aberto" (click)="toggleOlhoFechado()" *ngIf="!olhoFechado" src="img/olho_aberto.svg" alt="Ocultar Senha">
                 </div>
                 <div class="div_dados">
                     <img id="icon_info_2" src="img/icon_info.svg" alt="Icone de informação">

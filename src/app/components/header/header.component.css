@@ -22,12 +22,18 @@
 .container_navegacao {
     flex-direction: column;
     z-index: 100;
-    width: 180px;
+    width: 250px;
     height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
     top: 0;
     position: fixed;
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.302);
+}
+
+.container_navegacao.menu-ativo {
+    transform: translateX(0);
 }
 
 .navegacao {
