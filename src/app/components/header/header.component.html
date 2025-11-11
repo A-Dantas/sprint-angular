@@ -1,7 +1,7 @@
 <header class="cabecalho">
         <div class="icons_home">
             <div class="container_icon_hamburguer">
-                <img id="icon_burguer" src="img/icon_menu_burguer.svg" alt="Icon menu hamburguer">
+                <img (click)="toggleMenu()" id="icon_burguer" src="img/icon_menu_burguer.svg" alt="Icon menu hamburguer">
             </div>
             <div class="container_icon_logout">
                 <a href="">
@@ -9,8 +9,9 @@
                 </a>
             </div>
         </div>
-    </header>
-    <aside class="container_navegacao">
+</header>
+    <div class="menu-overlay" (click)="toggleMenu()" *ngIf="menuAberto"></div>
+    <aside *ngIf="menuAberto" class="container_navegacao">
         <nav class="navegacao">
             <a href="">
                 <img src="img/ford_logo.png" alt="Imagem logo Ford" id="logo">

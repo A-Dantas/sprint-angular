@@ -172,6 +172,12 @@ input:checked + .slider:before {
   background-color: #a6b5aa;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 @media (max-width: 800px) {
