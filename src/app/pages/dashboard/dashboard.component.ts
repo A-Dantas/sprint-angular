@@ -3,7 +3,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { ApiService } from '../../api.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Vehicle } from '../../models/vehicle.model';
+import { Veiculo, Veiculos, VeiculosAPI } from '../../models/veiculo.model';
 import { VehicleData } from '../../models/vehicleData.model';
 
 
@@ -19,9 +19,9 @@ import { VehicleData } from '../../models/vehicleData.model';
 })
 export class DashboardComponent {
   
-  listaVehicles?: Vehicle[];
+  listaVehicles?: Veiculos;
 
-  veiculoSelecionado?: Vehicle;
+  veiculoSelecionado?: Veiculo;
 
   vinDigitado: string = '';
 
@@ -37,7 +37,7 @@ export class DashboardComponent {
   returnVehicles() {
     this.apiService.buscarVehicles().subscribe({
       next: (vehicles) => {
-        this.listaVehicles = vehicles;
+        this.listaVehicles = vehicles.vehicles;
       },
 
       error: (err: Error) => {
