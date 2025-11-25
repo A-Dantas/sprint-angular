@@ -107,17 +107,12 @@
   bottom: -45.5px;
 }
 
-#olho_aberto {
+.icon_olho {
   width: 37px;
-  left: 94.2%;
+  left: 93.8%;
   top: 10%;
 }
 
-#olho_fechado {
-  width: 37px;
-  left: 94.2%;
-  top: 10%;
-}
 
 .switch {
   --secondary-container: #3a4b39;
@@ -181,18 +176,42 @@ input:checked + .slider:before {
   padding: 13px;
   border-radius: 5px;
   border: none;
-  background-color: #a6b5aa;
+  background-color: blue;
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
 .formulario button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: 0.5s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1500px) {
+  .icon_olho {
+    width: 37px;
+    left: 92.3%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .icon_olho {
+    width: 37px;
+    left: 92.3%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .icon_olho {
+    width: 37px;
+    left: 91.3%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 850px) {
   .container_imagem {
     display: none;
   }
@@ -222,6 +241,13 @@ input:checked + .slider:before {
   #icon_info {
     left: 99.9%;
   }
+
+  .icon_olho {
+    width: 37px;
+    left: 93.2%;
+    top: 10%;
+  }
+
 }
 
 @media (max-width: 450px) {

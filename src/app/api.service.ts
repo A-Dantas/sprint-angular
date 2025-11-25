@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Veiculo, VeiculosAPI } from './models/veiculo.model';
+import { VeiculosAPI } from './models/veiculo.model';
 import { Observable } from 'rxjs';
 import { VehicleData } from './models/vehicleData.model';
 import { Usuario } from './models/usuario.model';
